@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Parmar - Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-title img {
+      width: 40px;
+      height: 40px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      color: #0d47a1;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0288d1;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 60px 50px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      color: #0d47a1;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .about p, .contact p {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .services-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #0288d1;
+      margin-bottom: 10px;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .contact-info, .skills {
+      flex: 1;
+      min-width: 300px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-info h3, .skills h3 {
+      color: #0d47a1;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p, .skills p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills ul li {
+      background: #e3f2fd;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Logo">
+      <h1>Yash Parmar</h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Creative & Passionate Web Developer</h2>
+  </div>
+
+  <section id="about" class="reveal">
+    <div class="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I'm Yash Parmar, a creative and passionate web developer dedicated to crafting beautiful and functional websites.
+        With strong problem-solving skills and a deep love for clean code, I build engaging digital experiences that make an impact.
+      </p>
+    </div>
+  </section>
+
+  <section id="services" class="reveal">
+    <div class="services">
+      <h2 class="section-title">Services</h2>
+      <div class="services-cards">
+        <div class="card">
+          <h3>Responsive Website Design</h3>
+          <p>Crafting adaptive, mobile-friendly designs that look great on any device.</p>
+        </div>
+        <div class="card">
+          <h3>Front-End Development</h3>
+          <p>Building interactive UI using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="card">
+          <h3>Custom Web Applications</h3>
+          <p>Developing tailored solutions to match your business needs.</p>
+        </div>
+        <div class="card">
+          <h3>Branding Sites</h3>
+          <p>Creating standout personal and professional portfolios.</p>
+        </div>
+        <div class="card">
+          <h3>Maintenance & Support</h3>
+          <p>Keeping your site running smoothly with updates and fixes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-section">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>Email:</strong> <a href="mailto:yashparmar3012@gmail.com">yashparmar3012@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:8160424815">8160424815</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yash-parmar-8a7430219/" target="_blank">Yash Parmar</a></p>
+      </div>
+      <div class="skills">
+        <h3>My Skills</h3>
+        <ul>
+          <li>HTML5, CSS3, JavaScript</li>
+          <li>Responsive Design</li>
+          <li>React.js & Node.js (Basics)</li>
+          <li>Git & GitHub</li>
+          <li>UI/UX Best Practices</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Yash Parmar | Built with ❤ and creativity
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
